@@ -22,3 +22,17 @@ We would be connecting to the Instance Using The SSH Client Putty
 **Successfully Connected**
 
 <img width="351" alt="image" src="https://user-images.githubusercontent.com/102925329/200560362-09362eda-6916-4f3d-a851-f1b1dfdda586.png">
+
+
+**INSTALLING APACHE AND UPDATING THE FIREWALL**
+
+First of all we run the : 'sudo apt update' to update the packages 
+
+<img width="461" alt="image" src="https://user-images.githubusercontent.com/102925329/200561441-36f28143-1f69-49e1-aed3-a77a32d07102.png">
+
+Then we run : 'sudo apt install apache2' to install the apache package
+
+To verify that apache2 is running as a Service in our OS, use following command : sudo systemctl status apache2
+
+<img width="433" alt="image" src="https://user-images.githubusercontent.com/102925329/200562559-ef327240-8381-46b7-8a27-5dcaade09cff.png">
+
