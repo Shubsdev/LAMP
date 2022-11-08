@@ -18,3 +18,7 @@ Now we connect to instance using the Public IP
 We would be connecting to the Instance Using The SSH Client Putty 
 
 <img width="224" alt="image" src="https://user-images.githubusercontent.com/102925329/200559693-73c7bc2c-86a0-4d73-a580-0f11c9c58d09.png">
+
+**Successfully Connected**
+
+<img width="351" alt="image" src="https://user-images.githubusercontent.com/102925329/200560362-09362eda-6916-4f3d-a851-f1b1dfdda586.png">
