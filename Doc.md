@@ -81,3 +81,22 @@ You have Apache installed to serve your content and MySQL installed to store and
 To install all packages needed : sudo apt install php libapache2-mod-php php-mysql
 To confirm Php installed : php -v
 
+## CREATE A VIRTUAL HOST USING APACHE
+Apache on Ubuntu 20.04 has one server block enabled by default that is configured to serve documents from the /var/www/html directory.
+We will leave this configuration as is and will add our own directory next next to the default one.
+
+To create the new directory : sudo mkdir /var/www/lampproject
+
+Assign ownership of the directory with your current system user: sudo chown -R $USER:$USER /var/www/lampproject
+
+Then, create and open a new configuration file in Apache’s sites-available directory using your preferred command-line editor. 
+sudo vi /etc/apache2/sites-available/lampproject.conf
+This will create a new blank file. Paste in the following bare-bones configuration by hitting on i on the keyboard to enter the insert mode, and paste the text:
+<VirtualHost *:80>
+    ServerName lampproject
+    ServerAlias www.lampproject 
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/lampproject
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
