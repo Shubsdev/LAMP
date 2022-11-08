@@ -54,3 +54,30 @@ After Adding needed inbound rules, we Reload the page
 
 <img width="898" alt="image" src="https://user-images.githubusercontent.com/102925329/200565255-66a550d3-892c-4998-a529-245154c3f535.png">
 
+**Connected Successfully**
+
+
+**INSTALLING MYSQL**
+
+Now that you have a web server up and running, you need to install a Database Management System (DBMS) to be able to store and manage data for your site in a relational database. MySQL is a popular relational database management system used within PHP environments, so we will use it in our project.
+
+We use the command : sudo apt install mysql-server
+Log Into the MYSQL console with the command : sudo mysql
+
+<img width="419" alt="image" src="https://user-images.githubusercontent.com/102925329/200566941-22895ccb-efec-4a9c-8cdb-8fd98fee6927.png">
+
+Run this script to lock down database and set password: ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
+
+Test to login into MYSQL console : sudo mysql -p
+
+<img width="448" alt="image" src="https://user-images.githubusercontent.com/102925329/200570038-a7693fcd-00f0-4e94-a3b9-d7f02a064718.png">
+
+**LOGIN SUCCESSFUL**
+
+**INSTALLING PHP**
+
+You have Apache installed to serve your content and MySQL installed to store and manage your data. PHP is the component of our setup that will process code to display dynamic content to the end user. In addition to the php package, you’ll need php-mysql, a PHP module that allows PHP to communicate with MySQL-based databases. You’ll also need libapache2-mod-php to enable Apache to handle PHP files. Core PHP packages will automatically be installed as dependencies.
+
+To install all packages needed : sudo apt install php libapache2-mod-php php-mysql
+To confirm Php installed : php -v
+
