@@ -126,3 +126,25 @@ This will create a new blank file. Paste in the following bare-bones configurati
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 
     </VirtualHost>
+
+
+You can now use a2ensite command to enable the new virtual host: 
+
+    sudo a2ensite lampproject
+    
+ You might want to disable the default website that comes installed with Apache. This is required if you’re not using a custom domain name, because in this case Apache’s default configuration would overwrite your virtual host. To disable Apache’s default website use a2dissite command , type:
+ 
+    sudo a2dissite 000-default
+    
+ <img width="497" alt="Screenshot 2022-11-08 203815" src="https://user-images.githubusercontent.com/102925329/200659070-20898392-5cf9-4680-b2ed-c99f29ec30d2.png">
+
+Your new website is now active, but the web root /var/www/lampproject is still empty. Create an index.html file in that location so that we can test that the virtual host works as expected:
+
+     sudo echo 'This is for GITHUB and the current hostname is:' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/lampproject/index.html
+     
+Now load the Public IP: 
+
+<img width="521" alt="image" src="https://user-images.githubusercontent.com/102925329/200661001-647fc775-0fcf-4da1-9413-1b59f18543c3.png">
+
+
+ 
