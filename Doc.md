@@ -36,3 +36,21 @@ To verify that apache2 is running as a Service in our OS, use following command 
 
 <img width="433" alt="image" src="https://user-images.githubusercontent.com/102925329/200562559-ef327240-8381-46b7-8a27-5dcaade09cff.png">
 
+
+After confirming The Service is running, We would try to connect to the server Using the Public Ip from a web browser.
+
+<img width="874" alt="image" src="https://user-images.githubusercontent.com/102925329/200564314-45fa5318-c2d6-460c-a877-51b364eea023.png">
+
+We ran into an error of not being able to access from the Public Ip 
+This occurs because we have not set needed Inbound rules to allow connection via Port 80
+This can be done from the security groups
+
+<img width="950" alt="image" src="https://user-images.githubusercontent.com/102925329/200564799-1d69089a-8a13-4cd4-bec2-3e8128574a47.png">
+
+<img width="949" alt="image" src="https://user-images.githubusercontent.com/102925329/200564991-c3121609-e595-4618-9fcf-4870b59149b4.png">
+
+
+After Adding needed inbound rules, we Reload the page 
+
+<img width="898" alt="image" src="https://user-images.githubusercontent.com/102925329/200565255-66a550d3-892c-4998-a529-245154c3f535.png">
+
