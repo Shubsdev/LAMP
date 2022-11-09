@@ -1,4 +1,4 @@
-## LAMP STACK IMPLEMENTATION
+## LAMP STACK IMPLEMENTATION ON AWS
 
 This is a Walkthrough on steps to create a LAMP(Linux, Apache, MySQL, PHP or Python, or Perl)
 
@@ -26,13 +26,15 @@ We would be connecting to the Instance Using The SSH Client Putty
 
 **INSTALLING APACHE AND UPDATING THE FIREWALL**
 
-First of all we run the : 'sudo apt update' to update the packages 
+First of all we run the :
+         
+    sudo apt update     
 
 <img width="461" alt="image" src="https://user-images.githubusercontent.com/102925329/200561441-36f28143-1f69-49e1-aed3-a77a32d07102.png">
 
 Then we run : 
 
-    sudo apt install apache2 --to install the apache package
+    sudo apt install apache2    #to install the apache package
 
 To verify that apache2 is running as a Service in our OS, use following command :
 
